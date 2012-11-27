@@ -1,0 +1,27 @@
+<h1>Listing rands</h1>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th>File</th>
+    <th>File desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rands.each do |rand| %>
+  <tr>
+    <td><%= rand.file %></td>
+    <td><%= rand.file_desc %></td>
+    <td><%= link_to 'Show', rand %></td>
+    <td><%= link_to 'Edit', edit_rand_path(rand) %></td>
+    <td><%= link_to 'Destroy', rand, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'rand show', rands_rand_show_path %><br>
+
+<%= link_to 'New Rand', new_rand_path %>

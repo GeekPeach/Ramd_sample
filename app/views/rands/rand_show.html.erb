@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag(@rand.file, :width => "600") %>
+</p> 
+
+<p>
+  <b>File:</b>
+  <%= @rand.file %>
+</p>
+
+<p>
+  <b>File desc:</b>
+  <%= @rand.file_desc %>
+</p>
+
+<%= link_to 'rand show', rands_rand_show_path %><br>
+
+<%= link_to 'Edit', edit_rand_path(@rand) %> |
+<%= link_to 'Back', rands_path %>

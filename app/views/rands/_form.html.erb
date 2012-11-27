@@ -1,0 +1,25 @@
+<%= form_for(@rand) do |f| %>
+  <% if @rand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rand.errors.count, "error") %> prohibited this rand from being saved:</h2>
+
+      <ul>
+      <% @rand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file %><br />
+    <%= f.text_field :file %>
+  </div>
+  <div class="field">
+    <%= f.label :file_desc %><br />
+    <%= f.text_field :file_desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
